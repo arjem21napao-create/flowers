@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07020f;
+  --glow: #b44dff;
+  --text: #f1dcff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom fonts */
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-sans-clean {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Beating heart animation matching original */
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.12);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.08);
+  }
+}
+
+/* Shimmering flick glow matching original */
+@keyframes flick {
+  from {
+    text-shadow: 0 0 10px var(--glow), 0 0 30px var(--glow);
+  }
+  to {
+    text-shadow: 0 0 16px #d9a0ff, 0 0 48px #a020f0;
+  }
+}
+
+.flick-text {
+  animation: flick 3s infinite alternate;
+}
+
+/* Falling particles */
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(112vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Modal Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "For Crish 💜 - 3D Purple Rose",
+  "description": "An enchanting romantic 3D purple rose keepsake with interactive heart opening, dew drops, ambient music, and heartfelt dedication for Crish.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
